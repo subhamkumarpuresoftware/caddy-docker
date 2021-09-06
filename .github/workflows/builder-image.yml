@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - v*
 
 jobs:
   publish:
@@ -14,11 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Prepare
-        id: prepare
-        run: |
-            TAG=${GITHUB_REF##*/}
-            echo ::set-output name=tag_name::${TAG}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
