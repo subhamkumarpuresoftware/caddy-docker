@@ -27,5 +27,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            subham328/caddy-builder:${{ steps.prepare.outputs.tag_name }}
             subham328/caddy-builder:latest
