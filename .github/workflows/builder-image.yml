@@ -1,7 +1,6 @@
 name: ci
 
 on:
-  pull_request:
   push:
     branches:
       - master
@@ -9,8 +8,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up Docker Buildx
